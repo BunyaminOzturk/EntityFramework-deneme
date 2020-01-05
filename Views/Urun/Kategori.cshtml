@@ -1,0 +1,51 @@
+﻿@model IEnumerable<AspNetMVC_020_EntityFramework.Models.Urun>
+
+@*@{
+    ViewBag.Title = "Kategori";
+}*@
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Ürün Ekle", "KategoriYeniUrun", new { Id = ViewBag.Id })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Kategori.Ad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ad)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Fiyat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Stok)
+        </th>*@
+        <th>İşlemler</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kategori.Ad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ad)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Fiyat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stok)
+        </td>*@
+        <td>
+            @Html.ActionLink("Düzenle", "Duzenle", new { id=item.Id }) |
+            @Html.ActionLink("Detay", "Detay", new { id=item.Id }) |
+            @Html.ActionLink("Sil", "Sil", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

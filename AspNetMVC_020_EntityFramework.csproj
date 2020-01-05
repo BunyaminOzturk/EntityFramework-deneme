@@ -129,6 +129,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KategoriController.cs" />
+    <Compile Include="Controllers\UrunController.cs" />
     <Compile Include="DAL\SatisContext.cs" />
     <Compile Include="DAL\SatisInitializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -181,6 +182,10 @@
     <Content Include="Views\Kategori\Details.cshtml" />
     <Content Include="Views\Kategori\Edit.cshtml" />
     <Content Include="Views\Kategori\Index.cshtml" />
+    <Content Include="Views\Urun\Index.cshtml" />
+    <Content Include="Views\Urun\Kategori.cshtml" />
+    <Content Include="Views\Urun\Detay.cshtml" />
+    <Content Include="Views\Urun\Yeni.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
